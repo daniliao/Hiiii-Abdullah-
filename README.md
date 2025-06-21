@@ -75,11 +75,16 @@ The Django server will be available at `http://localhost:8000`
 
 ## Testing
 
-### Run All Tests
+### Run Django Server Tests
 ```bash
 cd happybackend
 python manage.py test
 ```
+
+### Run iOS App Tests
+#### 1. Open Xcode
+#### 2. Go to personInfoSwiftUITests/personInfoSwiftUITests.swift
+#### 3. Press Cmd+U to run the tests
 
 ## Database Management
 
