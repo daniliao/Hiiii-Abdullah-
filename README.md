@@ -18,7 +18,7 @@ pip install -r requirements.txt
 ```bash
 createdb happydb
 ```
-2. (Optional) Manually create tables (if not using Django migrations):
+2. Add schema:
 ```bash
 CREATE TABLE app_users (
     id SERIAL PRIMARY KEY,
@@ -41,19 +41,6 @@ CREATE TABLE subscriptions (
 );
 ```
 
-2. ### Environment Variables
-Create a `.env` file at the root:
-```
-POSTGRES_DB=happydb
-POSTGRES_USER=happy_user
-POSTGRES_PASSWORD=iamhappy
-POSTGRES_HOST=localhost
-POSTGRES_PORT=5432
-DEBUG=True
-SECRET_KEY='django-insecure-zoj(ci0em4kc8v*@n3x&jbx@8bg)z1&i+@uiku7+khv1xtmdlp'
-```
-
-
 ### 5. Run Database Migrations
 ```bash
 cd happybackend
@@ -70,8 +57,6 @@ python manage.py createsuperuser
 ```bash
 python manage.py runserver
 ```
-
-The Django server will be available at `http://localhost:8000`
 
 ## Testing
 
