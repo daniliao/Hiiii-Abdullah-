@@ -18,28 +18,6 @@ pip install -r requirements.txt
 ```bash
 createdb happydb
 ```
-2. Add schema:
-```bash
-CREATE TABLE app_users (
-    id SERIAL PRIMARY KEY,
-    device_id TEXT UNIQUE NOT NULL
-);
-
-CREATE TABLE happiness_surveys (
-    app_user_id INTEGER REFERENCES app_users(id),
-    id SERIAL PRIMARY KEY,
-    current_activity VARCHAR(255) NOT NULL,
-    happiness_level SMALLINT CHECK (happiness_level BETWEEN 1 AND 5),
-    submitted_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
-);
-
-CREATE TABLE subscriptions (
-    app_user_id INTEGER REFERENCES app_users(id),
-    id SERIAL PRIMARY KEY,
-    subscribed BOOLEAN DEFAULT FALSE,
-    last_response_at TIMESTAMP WITH TIME ZONE
-);
-```
 
 ### 5. Run Database Migrations
 ```bash
