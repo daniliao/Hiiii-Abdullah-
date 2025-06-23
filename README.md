@@ -1,3 +1,6 @@
+
+![Uploading Screen Recording 2025-06-23 at 7.36.51 PM.gif…]()
+
 ## Backend Setup
 
 ### 1. Set Up Python Virtual Environment
